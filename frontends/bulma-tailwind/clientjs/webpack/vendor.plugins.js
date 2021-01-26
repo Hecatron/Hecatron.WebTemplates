@@ -1,0 +1,35 @@
+// Vendor Plugins
+const path = require('path');
+const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+function plugins(isDevBuild, bundleOutputDir) {
+    return [
+
+        // Clean the build dir
+        new CleanWebpackPlugin(),
+
+        // Set the NODE_ENV environment variable to production / development
+        new webpack.DefinePlugin({ 'process.env.NODE_ENV': isDevBuild ? '"development"' : '"production"' }),
+        new webpack.DllPlugin({ path: path.join(bundleOutputDir, '[name]-manifest.json'), name: '[name]_[hash]' }),
+
+        // Maps these identifiers to the jQuery package (expected to be a global variable)
+        new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery' }),
+        new MiniCssExtractPlugin({ filename: 'styles/vendor.css' })
+
+    ].concat(isDevBuild ? [] : [
+
+        // Plugins that apply in production builds only
+        // Condense the CSS to as small as possible, and remove comments
+        new OptimizeCssAssetsPlugin({
+            cssProcessorPluginOptions: {
+                preset: ['default', { discardComments: { removeAll: true } }]
+            }
+        })
+
+    ]);
+};
+
+exports.plugins = plugins;
