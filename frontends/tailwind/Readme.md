@@ -1,3 +1,3 @@
 # Readme
 
-Frontend code example for bootstrap
+Frontend code example for tailwind
