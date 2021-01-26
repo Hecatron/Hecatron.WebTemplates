@@ -1,0 +1,25 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "quotes": [2, "double"]
+  },
+  "overrides": [
+    {
+      "files": [ "*.js" ],
+      "rules": {
+        "indent": ["error", 4],
+        "quotes": [ 2, "single" ]
+      }
+    },
+    {
+      "files": [ "*.ts" ],
+      "rules": {
+        "semi": ["error", "never"],
+        "indent": ["error", 4],
+        "quotes": [ 2, "single" ]
+      }
+    }
+  ]
+}
