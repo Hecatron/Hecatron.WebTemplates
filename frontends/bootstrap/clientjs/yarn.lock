@@ -7483,9 +7483,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"site-flask-vue-bootstrap-client@workspace:.":
+"site-vue-bootstrap-client@workspace:.":
   version: 0.0.0-use.local
-  resolution: "site-flask-vue-bootstrap-client@workspace:."
+  resolution: "site-vue-bootstrap-client@workspace:."
   dependencies:
     "@fortawesome/fontawesome-free": ^5.15.2
     "@fortawesome/fontawesome-svg-core": ^1.2.34

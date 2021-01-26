@@ -57,10 +57,63 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdi/font@npm:^5.9.55":
-  version: 5.9.55
-  resolution: "@mdi/font@npm:5.9.55"
-  checksum: 6f1880b19bba583580abb23b2187fc31793efb3778f4bef304dcc61b571696e7b53dc4582e9393d033962f0b487b6f7b815208353cd236148fdc8f07d96fbd5c
+"@fortawesome/fontawesome-common-types@npm:^0.2.34":
+  version: 0.2.34
+  resolution: "@fortawesome/fontawesome-common-types@npm:0.2.34"
+  checksum: cbfa1ad00fc80bc162a74c793bd96773001908c94316f0ac817b43e819334e42b21d35db47f78ff542f5e4397d394d7f68c0cbf7a7bf0719b0554cc6dea11cd8
+  languageName: node
+  linkType: hard
+
+"@fortawesome/fontawesome-free@npm:^5.15.2":
+  version: 5.15.2
+  resolution: "@fortawesome/fontawesome-free@npm:5.15.2"
+  checksum: 4f189f7474f28122a4173a344cb9c527b38dc8ecabcfe2eab2af60187679782426e37937afa282cc0d29dd0bd75e0b117d303d8f3491e41b828046f9648b93f5
+  languageName: node
+  linkType: hard
+
+"@fortawesome/fontawesome-svg-core@npm:^1.2.34":
+  version: 1.2.34
+  resolution: "@fortawesome/fontawesome-svg-core@npm:1.2.34"
+  dependencies:
+    "@fortawesome/fontawesome-common-types": ^0.2.34
+  checksum: 56d5608cfa05c1449ec5f19fda06c46f9c851c888dee92b8401c811f18a8fdf50ca7814dafd30ec5a89789a029143a00b17c71f3dc5b2adacfe38e259b945064
+  languageName: node
+  linkType: hard
+
+"@fortawesome/free-brands-svg-icons@npm:^5.15.2":
+  version: 5.15.2
+  resolution: "@fortawesome/free-brands-svg-icons@npm:5.15.2"
+  dependencies:
+    "@fortawesome/fontawesome-common-types": ^0.2.34
+  checksum: ccc4b05113caf94eb7a67cb80ad0af025b6d7526638254b885fd023cd59612e8c070b4f253c4038d1e13ca4dbb6304f811dddc10a49d88c986baba21fa0008ef
+  languageName: node
+  linkType: hard
+
+"@fortawesome/free-regular-svg-icons@npm:^5.15.2":
+  version: 5.15.2
+  resolution: "@fortawesome/free-regular-svg-icons@npm:5.15.2"
+  dependencies:
+    "@fortawesome/fontawesome-common-types": ^0.2.34
+  checksum: a24ae419a3406cfa71787bb677b44a687fe6a32f753e066fd451a56814cd05647a025d8d86130490675ab0ff4538c470a6f6d3b2b73a7b50c658120fc82a4525
+  languageName: node
+  linkType: hard
+
+"@fortawesome/free-solid-svg-icons@npm:^5.15.2":
+  version: 5.15.2
+  resolution: "@fortawesome/free-solid-svg-icons@npm:5.15.2"
+  dependencies:
+    "@fortawesome/fontawesome-common-types": ^0.2.34
+  checksum: 7fe1cc0287170a1c39d4157e2830064bfcd986d3e1c350b2230f8145375118837229c0e54fbe3516bb3a5810a44520ad6087e4a08e4b36789de93e6b7a98c5e8
+  languageName: node
+  linkType: hard
+
+"@fortawesome/vue-fontawesome@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "@fortawesome/vue-fontawesome@npm:2.0.2"
+  peerDependencies:
+    "@fortawesome/fontawesome-svg-core": ">= 1.2.0 < 1.3"
+    vue: ~2
+  checksum: 87cad52e5316bca00183f24533703048ab34ff3b2642ab9a8f1053462fb60c22799dab22484c401f7ac1c61bd3fe1838a4240f5a85d7ce9c4eb6f03bc8841b26
   languageName: node
   linkType: hard
 
@@ -91,10 +144,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@quasar/extras@npm:^1.9.14":
-  version: 1.9.14
-  resolution: "@quasar/extras@npm:1.9.14"
-  checksum: aa895a11d9f07f91803c7fcb71327d98824180979bf1fc9901fa8564d83aa4822d88689482eb7f5d3767abfc78cdf382513efcdb672c90461d00b16d40ebf8ca
+"@popperjs/core@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "@popperjs/core@npm:2.6.0"
+  checksum: b05148a11586c3d622973d4968355e694471ae86620eaf28d78360e4e48323123428c963dbc76182777a91837203de4060a0e76603a4b275df3ebcdaaf1e4ded
   languageName: node
   linkType: hard
 
@@ -154,14 +207,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/estree@npm:*":
-  version: 0.0.45
-  resolution: "@types/estree@npm:0.0.45"
-  checksum: 9d339cbcf29a96a32e9d40efc21009c2342e93c4f653294dd1ef081ae474bca9e54707e5d4a1cff90b9e3566e8bdd71ac31e0c3d24bc2ff1d3d5aa75058b3937
-  languageName: node
-  linkType: hard
-
-"@types/estree@npm:^0.0.46":
+"@types/estree@npm:*, @types/estree@npm:^0.0.46":
   version: 0.0.46
   resolution: "@types/estree@npm:0.0.46"
   checksum: 69fcf647706f5b6a475ec2f9aacf73b40866f577eef6c6f33de95cc3b4897381c2a8257646f13cd5d91fffc5debfe6289b6864ba29ad349ae68703f8b993c9f6
@@ -218,15 +264,6 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: 9f5ba01f1031010f686f628d1b7f8b0989cd0562436675eff13f944ae2ffbaa90be0d2a7f89a6caf5763e00822080ae28c58ce0e1cde138322decb636641e568
-  languageName: node
-  linkType: hard
-
-"@types/jquery@npm:^3.5.5":
-  version: 3.5.5
-  resolution: "@types/jquery@npm:3.5.5"
-  dependencies:
-    "@types/sizzle": "*"
-  checksum: 9e3c34451577c6916ac9de8a26fd8bce2831cb5861116514cba4a984189067635a3e084039308324d8e20bfa5f2e1ce7725a509110e5e05487b91f9369b1ae43
   languageName: node
   linkType: hard
 
@@ -293,13 +330,6 @@ __metadata:
     "@types/mime": "*"
     "@types/node": "*"
   checksum: 357b76f32ea14f158540cf479b8b0b69fada18d8348a544630c58d7188e65b569519c70f90023d17fe4b00c4fe78dac2f9030a61279f7ac06b67d414a479623c
-  languageName: node
-  linkType: hard
-
-"@types/sizzle@npm:*":
-  version: 2.3.2
-  resolution: "@types/sizzle@npm:2.3.2"
-  checksum: 447a1c3f39f0e47ffdbccd1df58d63e8b67dc001f44f26f43ac8243db7834a3d956cebc8abe9272ecbdccfc8f4ec0ae74b811ccdad5b6cddaf8f0968513d618a
   languageName: node
   linkType: hard
 
@@ -1270,17 +1300,17 @@ __metadata:
   linkType: hard
 
 "browserslist@npm:^4.14.5":
-  version: 4.16.0
-  resolution: "browserslist@npm:4.16.0"
+  version: 4.16.1
+  resolution: "browserslist@npm:4.16.1"
   dependencies:
-    caniuse-lite: ^1.0.30001165
+    caniuse-lite: ^1.0.30001173
     colorette: ^1.2.1
-    electron-to-chromium: ^1.3.621
+    electron-to-chromium: ^1.3.634
     escalade: ^3.1.1
-    node-releases: ^1.1.67
+    node-releases: ^1.1.69
   bin:
     browserslist: cli.js
-  checksum: 5385f3dfb1bd1d321093a88c758a5429b55e5f4c76abd91ce865729cfcaa45dc1a54e934e2a8400aca7200f1b9993b1e147bea9fe0fa6704a968b230abd4f277
+  checksum: 56f51464c3a3bd9b2aeb75ded1dc3fce5ad91bd6d84187aba812a78ba66b69bc97c2de25a1b7409daac3c0049e979bf0faa6cca4aacce0abcaf3107c250ce3fb
   languageName: node
   linkType: hard
 
@@ -1344,6 +1374,13 @@ __metadata:
   dependencies:
     caller-callsite: ^2.0.0
   checksum: c4b19e43d4d2afc62c2b283d74844811a4517a162f9490f62c74421ddcfbd3e3334890fd9c474db98b20d62598a0ae659798c402623866b6f6068683a81ec5e7
+  languageName: node
+  linkType: hard
+
+"callsite@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "callsite@npm:1.0.0"
+  checksum: 5940b23533433f4886dea106cdb16d8a511b36ebaf2ac0bbe0adae547a4259f142d37074f864e12f424927b50cf364fffd1fd75d45a62a622d22984d2375e859
   languageName: node
   linkType: hard
 
@@ -1421,10 +1458,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001165":
-  version: 1.0.30001165
-  resolution: "caniuse-lite@npm:1.0.30001165"
-  checksum: f01ea7f22389b403feb86790b4815437b816aeab685a177ab20297aa7f4447c8d9242ed544738003c7a6f03e302f7dde808171ccd0940659fd62c34f53452cbd
+"caniuse-lite@npm:^1.0.30001173":
+  version: 1.0.30001179
+  resolution: "caniuse-lite@npm:1.0.30001179"
+  checksum: 04707a2d8a37796a9abb6b0d7d7466818cbe968d1cff133a6d355989c0c683065c64403716e69c13e9cd23c6eb346711a51e9b067b831b2564fbc0ef64f63645
   languageName: node
   linkType: hard
 
@@ -2161,6 +2198,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"decache@npm:^4.6.0":
+  version: 4.6.0
+  resolution: "decache@npm:4.6.0"
+  dependencies:
+    callsite: ^1.0.0
+  checksum: f599e1cefae0a1d64d6f4b9d24bbe24ca467d752ba071225655352a8151188a16d5e46331f41aead3e8b9e7a14aa90010341c5490a2fd3b4fe48096e864a6c58
+  languageName: node
+  linkType: hard
+
 "decamelize@npm:^1.1.2, decamelize@npm:^1.2.0":
   version: 1.2.0
   resolution: "decamelize@npm:1.2.0"
@@ -2427,10 +2473,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron-to-chromium@npm:^1.3.621":
-  version: 1.3.625
-  resolution: "electron-to-chromium@npm:1.3.625"
-  checksum: b2f391217fbcada757b0c37c0e32f6f64bca09a9544742b4218c2dee1eabb2700682c9c03ecbf94e5003a7a2d97b1c61df44a76e9cabc66eaa6b1af6076ff9d7
+"electron-to-chromium@npm:^1.3.634":
+  version: 1.3.643
+  resolution: "electron-to-chromium@npm:1.3.643"
+  checksum: fd57da263ab344601336f2480bf61d59691c6c62639c5b6db30841282117e26d73c7a5239797ba6de5fbd801876d96938f8d81f3433b95212b092e85c146c8fe
   languageName: node
   linkType: hard
 
@@ -4499,13 +4545,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"jquery@npm:^3.5.1":
-  version: 3.5.1
-  resolution: "jquery@npm:3.5.1"
-  checksum: c50818c84837902a60938c85786feb612f346a9918f7285409d605449460790b3815ad8aaf5806f19e89f1a79b27d327802b421ab354fe213f3fd1801e3562e6
-  languageName: node
-  linkType: hard
-
 "js-base64@npm:^2.1.8":
   version: 2.6.4
   resolution: "js-base64@npm:2.6.4"
@@ -5373,10 +5412,10 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"node-releases@npm:^1.1.67":
-  version: 1.1.67
-  resolution: "node-releases@npm:1.1.67"
-  checksum: 19a76af9498421b28bbc0123effc870a2ebe68a6364a4eb6547c5f871d6c2d8095fb66cc582a2378af8fbb6124ef8360207ef29d7a5a507e27691c53a85e9df4
+"node-releases@npm:^1.1.69":
+  version: 1.1.70
+  resolution: "node-releases@npm:1.1.70"
+  checksum: 18e2b4b871614247633a7f246ec04f6eebcb0353c0514c38b5d814be6d067301c4b1b0e7cb53407b36034e79fbc589f77a1acafdaf292abc46a4f65b4b7af2e6
   languageName: node
   linkType: hard
 
@@ -5750,16 +5789,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"p-limit@npm:^3.0.2":
-  version: 3.0.2
-  resolution: "p-limit@npm:3.0.2"
-  dependencies:
-    p-try: ^2.0.0
-  checksum: 1eb23d6ea77709212bf8d7a98d36c4e8b5276ec791bf74f460c012fadf4580d136f40efafa25d4892a9327102866eafc79b441eed7be339b0da59da416ced600
-  languageName: node
-  linkType: hard
-
-"p-limit@npm:^3.1.0":
+"p-limit@npm:^3.0.2, p-limit@npm:^3.1.0":
   version: 3.1.0
   resolution: "p-limit@npm:3.1.0"
   dependencies:
@@ -6633,13 +6663,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"quasar@npm:^1.15.1":
-  version: 1.15.1
-  resolution: "quasar@npm:1.15.1"
-  checksum: daa5f3a5dacc937ea92a628e565199d81d8d51e7dee981524e3a56e5ef220a1b8c6f832ed9c290e5c01de72dc3433e92e8bad03c9156b55dbfcb069b5e12406b
-  languageName: node
-  linkType: hard
-
 "query-string@npm:^4.1.0":
   version: 4.3.4
   resolution: "query-string@npm:4.3.4"
@@ -7038,7 +7061,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"safe-buffer@npm:>=5.1.0, safe-buffer@npm:^5.0.1, safe-buffer@npm:^5.1.0, safe-buffer@npm:^5.1.2":
+"safe-buffer@npm:>=5.1.0, safe-buffer@npm:^5.0.1, safe-buffer@npm:^5.1.0, safe-buffer@npm:^5.1.2, safe-buffer@npm:~5.2.0":
   version: 5.2.1
   resolution: "safe-buffer@npm:5.2.1"
   checksum: 0bb57f0d8f9d1fa4fe35ad8a2db1f83a027d48f2822d59ede88fd5cd4ddad83c0b497213feb7a70fbf90597a70c5217f735b0eb1850df40ce9b4ae81dd22b3f9
@@ -7381,13 +7404,17 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"site-vue-quasar-umd-client@workspace:.":
+"site-vue-vuetify-client@workspace:.":
   version: 0.0.0-use.local
-  resolution: "site-vue-quasar-umd-client@workspace:."
+  resolution: "site-vue-vuetify-client@workspace:."
   dependencies:
-    "@mdi/font": ^5.9.55
-    "@quasar/extras": ^1.9.14
-    "@types/jquery": ^3.5.5
+    "@fortawesome/fontawesome-free": ^5.15.2
+    "@fortawesome/fontawesome-svg-core": ^1.2.34
+    "@fortawesome/free-brands-svg-icons": ^5.15.2
+    "@fortawesome/free-regular-svg-icons": ^5.15.2
+    "@fortawesome/free-solid-svg-icons": ^5.15.2
+    "@fortawesome/vue-fontawesome": ^2.0.2
+    "@popperjs/core": ^2.6.0
     "@types/webpack-dev-server": ^3.11.1
     "@types/webpack-env": ^1.16.0
     "@typescript-eslint/eslint-plugin": ^4.14.1
@@ -7404,11 +7431,9 @@ fsevents@~2.1.2:
     file-loader: ^6.2.0
     fork-ts-checker-webpack-plugin: ^6.1.0
     isomorphic-fetch: ^3.0.0
-    jquery: ^3.5.1
     node-sass: ^5.0.0
     node-sass-package-importer: ^5.3.2
     optimize-css-assets-webpack-plugin: ^5.0.4
-    quasar: ^1.15.1
     sass: ^1.32.5
     sass-loader: ^10.1.1
     style-loader: ^2.0.0
@@ -7424,6 +7449,8 @@ fsevents@~2.1.2:
     vue-server-renderer: ^2.6.12
     vue-style-loader: ^4.1.2
     vue-template-compiler: ^2.6.12
+    vuetify: ^2.4.3
+    vuetify-loader: ^1.6.0
     vuex: ^3.6.2
     vuex-router-sync: ^5.0.0
     webpack: ^5.18.0
@@ -7789,7 +7816,16 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"string_decoder@npm:^1.1.1, string_decoder@npm:~1.1.1":
+"string_decoder@npm:^1.1.1":
+  version: 1.3.0
+  resolution: "string_decoder@npm:1.3.0"
+  dependencies:
+    safe-buffer: ~5.2.0
+  checksum: 0a09afb610cb538707fcf0a50a080f159040529eabdba82f23b04f1d1f90adf9ba18cc3800231c6ab2ee55dece047f4bed87c56da52b2afd85c3c7fb73eb7e48
+  languageName: node
+  linkType: hard
+
+"string_decoder@npm:~1.1.1":
   version: 1.1.1
   resolution: "string_decoder@npm:1.1.1"
   dependencies:
@@ -8567,6 +8603,30 @@ typescript@^4.1.3:
   version: 2.6.12
   resolution: "vue@npm:2.6.12"
   checksum: 92ed547e55a4b27a2a45aa9ab7ff5999f891dc9754562a37226dd190b323d9f99daec892dd8bd39786e404e6e065d808e165b1a0c127ce8d45fd1bde79ec7312
+  languageName: node
+  linkType: hard
+
+"vuetify-loader@npm:^1.6.0":
+  version: 1.7.1
+  resolution: "vuetify-loader@npm:1.7.1"
+  dependencies:
+    decache: ^4.6.0
+    file-loader: ^6.2.0
+    loader-utils: ^2.0.0
+  peerDependencies:
+    vue-template-compiler: ^2.6.10
+    vuetify: ^1.3.0 || ^2.0.0
+    webpack: ^4.0.0 || ^5.0.0
+  checksum: 2a0b1525f929a225f8a808863caa5d7057e314f2da63cf22c6b32a25bcb64c21175fafb0b413a957d0a40463f6d44d3256724028edc110b639f4abc7a33adda3
+  languageName: node
+  linkType: hard
+
+"vuetify@npm:^2.4.3":
+  version: 2.4.3
+  resolution: "vuetify@npm:2.4.3"
+  peerDependencies:
+    vue: ^2.6.4
+  checksum: 121a409d5c39c665f0b6e5d0ee11afad4cdbc013ef840490d98f453dff850d21a6585b77cecacb5ab44db8ff65c876b12172b6a6fda592f24c47825f594cdffa
   languageName: node
   linkType: hard
 

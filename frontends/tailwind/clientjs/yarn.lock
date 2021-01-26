@@ -7680,9 +7680,9 @@ resolve@^1.19.0:
   languageName: node
   linkType: hard
 
-"site-flask-vue-bootstrap-client@workspace:.":
+"site-vue-tailwind-client@workspace:.":
   version: 0.0.0-use.local
-  resolution: "site-flask-vue-bootstrap-client@workspace:."
+  resolution: "site-vue-tailwind-client@workspace:."
   dependencies:
     "@fortawesome/fontawesome-free": ^5.15.2
     "@fortawesome/fontawesome-svg-core": ^1.2.34
