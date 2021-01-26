@@ -13,7 +13,7 @@ function rules(isDevBuild) {
         { test: /\.css$/, use: isDevBuild ?
             // Development - inline css
             [MiniCssExtractPlugin.loader,
-                { loader: 'css-loader', options: { importLoaders: 1, sourceMap: true } },
+                { loader: 'css-loader', options: { importLoaders: 1, sourceMap: false } },
                 { loader: 'postcss-loader' }
             ] :
 
@@ -29,7 +29,7 @@ function rules(isDevBuild) {
 
             // Development - inline css
             [MiniCssExtractPlugin.loader,
-                { loader: 'css-loader', options: { importLoaders: 2, sourceMap: true } },
+                { loader: 'css-loader', options: { importLoaders: 2, sourceMap: false } },
                 { loader: 'postcss-loader' },
                 { loader: 'sass-loader', options: { sassOptions: { includePaths: ['src/css', 'node_modules'] }, implementation: require('sass'), sourceMap: true } }
             ] :
