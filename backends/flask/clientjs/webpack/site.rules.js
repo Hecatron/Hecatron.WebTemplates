@@ -3,6 +3,7 @@ const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 
 function rules(isDevBuild) {
     return [
+
         // Typescript files
         { test: /\.ts$/, include: /src/, loader: 'ts-loader', options: { appendTsSuffixTo: [/\.vue$/] } },
 
@@ -42,6 +43,7 @@ function rules(isDevBuild) {
         { test: /.(ttf|otf|eot|svg|woff(2)?)$/, use:
             [{ loader: 'file-loader', options: { name: '[name].[ext]', outputPath: 'fonts/' } }]
         }
+
     ];
 };
 
