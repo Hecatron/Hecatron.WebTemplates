@@ -1,0 +1,30 @@
+{
+  // Use IntelliSense to find out which attributes exist for C# debugging
+  // Use hover for the description of the existing attributes
+  // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+  "version": "0.2.0",
+  "compounds": [
+    {
+      "name": "Server / Client Debug",
+      "configurations": [
+        "Server Debug - Flask Python",
+        "Client Debug - Firefox"
+      ]
+    }
+  ],
+  "configurations": [
+    {
+      "name": "Server Debug - Flask Python",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/server/run.py",
+      "console": "integratedTerminal",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "HTTP_SERVER_PORT": "3000"
+      },
+      "preLaunchTask": "build:dev:server"
+    }
+  ]
+}
