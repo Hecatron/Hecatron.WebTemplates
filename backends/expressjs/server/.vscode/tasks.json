@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build:dev",
+      "type": "npm",
+      "script": "build:dev",
+      "group": "build",
+      "problemMatcher": [],
+    },
+    {
+      "label": "build:dev:watch",
+      "type": "npm",
+      "script": "build:dev:watch",
+      "group": "build",
+      "isBackground": true,
+      "problemMatcher": {
+        "pattern": {
+          "regexp": "^ERROR in",
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "\\Compilation  starting…",
+          "endsPattern": "\\[webpack-cli\\] watching files for updates...",
+        }
+      }
+    },
+
+    // Currently doesn't work, should close down the webpack background task launched via "yarn: build:dev:watch"
+    // via a postDebugTask hook - see https://github.com/microsoft/vscode/issues/109091
+
+    {
+      "label": "postdebugKill",
+      "type": "process",
+      "command":[
+          "${command:workbench.action.tasks.terminate}",
+          "${command:workbench.action.acceptSelectedQuickOpenItem}",
+      ],
+    },
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  // Use IntelliSense to find out which attributes exist for C# debugging
+  // Use hover for the description of the existing attributes
+  // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+  "version": "0.2.0",
+  "compounds": [
+    {
+      "name": "Server / Client Debug",
+      "configurations": ["Server Debug - Node", "Client Firefox Debug"]
+    }
+  ],
+  "configurations": [
+
+
+    // Server Debug Sessions
+    {
+      "name": "Server Debug - Node",
+      // Needed for debugging under yarn2's pnp system
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": ["node"],
+      // Program to debug
+      "program": "${workspaceFolder}/src/index.ts",
+      "cwd": "${workspaceFolder}",
+      "args": [],
+      "request": "launch",
+      "type": "pwa-node",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/build/**/*.js"
+      ],
+      "sourceMaps": true,
+      "preLaunchTask": "build:dev"
+    },
+
+    {
+      "name": "Server Debug - Nodemon",
+      // Needed for debugging under yarn2's pnp system
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": ["nodemon"],
+      "restart": true,
+      // Program to debug
+      "program": "${workspaceFolder}/src/index.ts",
+      "cwd": "${workspaceFolder}",
+      "args": [],
+      "request": "launch",
+      "type": "pwa-node",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/build/**/*.js"
+      ],
+      "sourceMaps": true,
+      "preLaunchTask": "build:dev:watch",
+      //"postDebugTask": "postdebugKill"
+    },
+
+
+    // Client Debug Sessions
+
+    {
+      "name": "Client Chrome Debug",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:1111/",
+      "webRoot": "${workspaceFolder}/wwwroot"
+    },
+    {
+      "name": "Client Firefox Debug",
+      "type": "firefox",
+      "request": "launch",
+      "url": "http://localhost:1111/",
+      "webRoot": "${workspaceFolder}/wwwroot",
+      "pathMappings": [
+        {
+          "url": "http://localhost:1111/client/src",
+          "path": "${workspaceFolder}/../client/src"
+        }
+      ]
+    },
+  ]
+}

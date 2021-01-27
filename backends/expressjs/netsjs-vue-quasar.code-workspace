@@ -1,0 +1,30 @@
+{
+  "folders": [
+    {
+      "name": "clientjs",
+      "path": "clientjs"
+    },
+    {
+      "name": "server",
+      "path": "server"
+    },
+    {
+      "name": "root",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "search.exclude": {
+      "clientjs/**/.yarn": true,
+      "clientjs/**/.pnp.*": true,
+      "server/**/.yarn": true,
+      "server/**/.pnp.*": true
+    },
+    "eslint.nodePath": "server/.yarn/sdks",
+    "typescript.tsdk": "server/.yarn/sdks/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true
+    "taskExplorer.enableTsc": false,
+    "taskExplorer.enableNpm": false,
+    "taskExplorer.showLastTasks": false
+  }
+}

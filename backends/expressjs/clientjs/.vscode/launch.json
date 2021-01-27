@@ -1,0 +1,28 @@
+{
+  // Use IntelliSense to find out which attributes exist for C# debugging
+  // Use hover for the description of the existing attributes
+  // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Client Debug - Firefox",
+      "type": "firefox",
+      "request": "launch",
+      "url": "http://localhost:3001/",
+      "webRoot": "${workspaceFolder}/../wwwroot",
+      "pathMappings": [
+        {
+          "url": "http://localhost:3001/clientjs/src",
+          "path": "${workspaceFolder}/src"
+        }
+      ]
+    },
+    {
+      "name": "Client Debug - Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3001/",
+      "webRoot": "${workspaceFolder}/../wwwroot"
+    }
+  ]
+}
