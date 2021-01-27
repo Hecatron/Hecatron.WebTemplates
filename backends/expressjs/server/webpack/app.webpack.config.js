@@ -2,8 +2,8 @@
 // This file typically brings in any js that's unique to the application.
 
 const path = require('path');
-const bundleOutputDir = path.join(__dirname, '/build');
-const app_opts = require('./webpack/app_opts');
+const bundleOutputDir = path.join(__dirname, '../build');
+const app_opts = require('./app_opts');
 
 // Pulls in the options / rules / plugins from the webpack directory
 module.exports = (env, argv) => {

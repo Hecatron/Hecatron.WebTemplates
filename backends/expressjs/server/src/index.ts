@@ -13,7 +13,7 @@ const {
 } = process.env
 
 // static assets
-app.use(express.static('../wwwroot'))
+app.use(express.static('../../wwwroot'))
 
 app.get('/', (req: Request, res: Response) => {
     res.send({

@@ -18,7 +18,7 @@ function opts(isDevBuild, bundleOutputDir) {
     stats: { modules: false },
     // Entry points of the js to start with when packing.
     entry: entrypoints,
-	// Target is a node application
+	  // Target is a node application
     target: 'node',
     // Plugins
     plugins: app_plugins.plugins(isDevBuild, bundleOutputDir),
