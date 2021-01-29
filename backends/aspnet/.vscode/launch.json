@@ -1,0 +1,35 @@
+{
+  // Use IntelliSense to find out which attributes exist for C# debugging
+  // Use hover for the description of the existing attributes
+  // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+  "version": "0.2.0",
+  "compounds": [
+    {
+      "name": "Server / Client Debug",
+      "configurations": [
+        "Server Debug .NET Core",
+        "Client Debug - Firefox"
+      ]
+    }
+  ],
+  "configurations": [
+    {
+      // TODO need to force the use of port 3000
+      "name": "Server Debug .NET Core",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "dotnet build",
+      // If you have changed target frameworks, make sure to update the program path.
+      "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/AspnetCore.Site.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "stopAtEntry": false,
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      }
+    }
+  ]
+}

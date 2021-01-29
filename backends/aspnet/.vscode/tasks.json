@@ -1,0 +1,73 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+
+    {
+      "label": "Start Debugging",
+      "type": "process",
+      "command": "${command:workbench.action.debug.start}",
+    },
+
+    {
+      "label": "dotnet build",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/site-aspnet.csproj"
+        ],
+      "problemMatcher": "$msCompile"
+    },
+
+    {
+      "label": "build:dev:server",
+      "type": "npm",
+      "script": "build:dev:server",
+      "group": "build",
+      "isBackground": true,
+      "options":{
+        "cwd": "${workspaceFolder}/clientjs"
+      },
+      "problemMatcher": {
+        "pattern": {
+          "regexp": "^ERROR in",
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Compiling...",
+          "endsPattern": "Compiled"
+        }
+      }
+    },
+
+    {
+      "label": "yarn build:dev",
+      "type": "npm",
+      "script": "build:dev",
+      "options":{
+        "cwd": "${workspaceFolder}/clientjs"
+      },
+      "group": "build"
+    },
+
+    {
+      "label": "yarn install",
+      "type": "npm",
+      "script": "build:install",
+      "options":{
+        "cwd": "${workspaceFolder}/clientjs"
+      },
+      "group": "build"
+    },
+
+    {
+      "label": "yarn lint",
+      "type": "npm",
+      "script": "lint",
+      "options":{
+        "cwd": "${workspaceFolder}/clientjs"
+      }
+    },
+
+  ]
+}
